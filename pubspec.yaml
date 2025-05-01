@@ -64,6 +64,19 @@ flutter:
   assets:
     - assets/logo.png
     - assets/bg.png
+    - assets/tent.png
+    - assets/campingbag.png
+    - assets/jacket.png
+    - assets/sleepingbag.png
+    - assets/umbrella.png
+    - assets/bca.png
+    - assets/mandiri.png
+    - assets/bri.png
+    - assets/gopay.png
+    - assets/dana.png
+    - assets/shopeepay.png
+    - assets/waiting.png
+    - assets/pickup.png
 
 
   # The following line ensures that the Material Icons font is
