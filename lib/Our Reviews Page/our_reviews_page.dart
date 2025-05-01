@@ -7,7 +7,7 @@ class OurReviewsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> reviews = [
       {
-        'name': 'Alfi',
+        'name': 'YAYA',
         'review':
         'Pelayanan sangat baik dari awal pemesanan sampai pengembalian barang. Kurir datang tepat waktu dan ramah, serta kondisi barang yang saya terima benar-benar terawat. Saya sangat puas dengan pengalamannya!',
         'rating': 5,
