@@ -7,28 +7,33 @@ class OurReviewsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> reviews = [
       {
-        'name': 'Amanda',
-        'review': 'Pelayanan sangat baik, cepat dan ramah!',
+        'name': 'Alfi',
+        'review':
+        'Pelayanan sangat baik dari awal pemesanan sampai pengembalian barang. Kurir datang tepat waktu dan ramah, serta kondisi barang yang saya terima benar-benar terawat. Saya sangat puas dengan pengalamannya!',
         'rating': 5,
       },
       {
-        'name': 'Budi',
-        'review': 'Barang sesuai deskripsi, pengiriman aman.',
+        'name': 'Marco',
+        'review':
+        'Barang yang saya sewa sesuai dengan deskripsi di aplikasi. Proses pemesanannya juga sangat mudah, hanya saja pengiriman sempat sedikit terlambat sekitar 15 menit. Tapi secara keseluruhan tetap memuaskan.',
         'rating': 4,
       },
       {
-        'name': 'Citra',
-        'review': 'Sangat puas, pasti akan sewa lagi.',
+        'name': 'Faiz',
+        'review':
+        'Saya sudah beberapa kali menyewa dari sini dan selalu puas dengan layanannya. Aplikasinya mudah digunakan, timnya responsif, dan produk yang disediakan sangat lengkap dan berkualitas tinggi.',
         'rating': 5,
       },
       {
-        'name': 'Dika',
-        'review': 'Ada keterlambatan sedikit, tapi tetap responsif.',
+        'name': 'Rauf',
+        'review':
+        'Secara umum pengalaman saya menyenangkan. Ada sedikit keterlambatan saat pengantaran, namun pihak customer service cepat tanggap dan langsung menghubungi saya untuk memberi kabar. Sangat menghargai itu.',
         'rating': 4,
       },
       {
-        'name': 'Eka',
-        'review': 'Pengalaman yang menyenangkan, thanks!',
+        'name': 'Qalam',
+        'review':
+        'Sewa peralatan di sini sangat praktis. Barang dikemas dengan aman, semua dalam kondisi baik, dan proses pengembaliannya juga mudah. Terima kasih untuk layanan yang sangat profesional dan terpercaya!',
         'rating': 5,
       },
     ];
@@ -66,6 +71,7 @@ class OurReviewsPage extends StatelessWidget {
                           const Text(
                             'Our Reviews',
                             style: TextStyle(
+                              fontFamily: 'Poppins',
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
                             ),
