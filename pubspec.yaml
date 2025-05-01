@@ -38,6 +38,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  file_picker: ^6.1.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -92,6 +93,13 @@ flutter:
     - assets/pickup.png
     - assets/icons/
     - assets/products/
+    - assets/mountain_background.png
+    - assets/mountain_background2.png
+    - assets/instagram.png
+    - assets/twitter.png
+    - assets/youtube.png
+    - assets/tik-tok.png
+    - assets/profile.png
 
 
   # The following line ensures that the Material Icons font is
