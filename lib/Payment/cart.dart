@@ -323,52 +323,66 @@ class _CartPageState extends State<CartPage> {
                                         offset: Offset(5, -19),
                                         child: Row(
                                           children: [
+                                            // Tombol minus
                                             Container(
+                                              width: 25, // Sedikit diperbesar agar lebih mudah disentuh
+                                              height: 25,
                                               decoration: BoxDecoration(
                                                 color: Colors.grey[300],
-                                                borderRadius: BorderRadius.circular(2),
+                                                borderRadius: BorderRadius.circular(4),
                                               ),
-                                              child: IconButton(
-                                                icon: Icon(Icons.remove, size: 10, color: Colors.black),
-                                                onPressed: () {
-                                                  setState(() {
-                                                    if (item.quantity > 1) item.quantity--;
-                                                  });
-                                                },
-                                                constraints: BoxConstraints(minWidth: 20, minHeight: 20),
-                                                padding: EdgeInsets.zero,
+                                              child: Material(
+                                                color: Colors.transparent,
+                                                child: InkWell(
+                                                  borderRadius: BorderRadius.circular(4),
+                                                  onTap: () {
+                                                    setState(() {
+                                                      if (item.quantity > 1) item.quantity--;
+                                                    });
+                                                  },
+                                                  child: Center(
+                                                    child: Icon(Icons.remove, size: 14, color: Colors.black),
+                                                  ),
+                                                ),
                                               ),
                                             ),
-                                            SizedBox(width: 4),
+                                            SizedBox(width: 8),
                                             Text(
                                               '${item.quantity}',
                                               style: TextStyle(
-                                                fontSize: 14,
+                                                fontSize: 16,
                                                 fontFamily: 'Poppins',
                                               ),
                                             ),
-                                            SizedBox(width: 4),
+                                            SizedBox(width: 8),
+                                            // Tombol plus
                                             Container(
+                                              width: 25, // Sedikit diperbesar agar lebih mudah disentuh
+                                              height: 25,
                                               decoration: BoxDecoration(
                                                 color: Color(0xFF5A4032),
-                                                borderRadius: BorderRadius.circular(2),
+                                                borderRadius: BorderRadius.circular(4),
                                               ),
-                                              child: IconButton(
-                                                icon: Icon(Icons.add, size: 14, color: Colors.white),
-                                                onPressed: () {
-                                                  setState(() {
-                                                    item.quantity++;
-                                                  });
-                                                },
-                                                constraints: BoxConstraints(minWidth: 22, minHeight: 22),
-                                                padding: EdgeInsets.zero,
+                                              child: Material(
+                                                color: Colors.transparent,
+                                                child: InkWell(
+                                                  borderRadius: BorderRadius.circular(4),
+                                                  onTap: () {
+                                                    setState(() {
+                                                      item.quantity++;
+                                                    });
+                                                  },
+                                                  child: Center(
+                                                    child: Icon(Icons.add, size: 14, color: Colors.white),
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ],
                                         ),
                                       ),
                                     ],
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
