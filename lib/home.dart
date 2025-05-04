@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
-void main() => runApp(MyApp());
+import 'package:url_launcher/url_launcher.dart';
+import 'home/package.dart';
+import 'home/category.dart';
+import 'Transaction History/transaction_history.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -15,6 +17,36 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
+}
+
+class WhatsAppLauncherPage extends StatelessWidget {
+  const WhatsAppLauncherPage({super.key});
+
+  Future<void> openWhatsApp(BuildContext context) async {
+    const phoneNumber = '6281298101699';
+    final uri = Uri.parse('https://wa.me/$phoneNumber');
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Could not launch WhatsApp')),
+      );
+    }
+
+    // Kembali ke halaman sebelumnya setelah mencoba membuka WhatsApp
+    Navigator.pop(context);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      openWhatsApp(context);
+    });
+
+    return Scaffold(
+      body: Center(child: CircularProgressIndicator()),
+    );
+  }
 }
 
 // Widget untuk item navigasi custom
@@ -135,6 +167,7 @@ class TransparentBottomNavBar extends StatelessWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0; // Tambahkan ini
+
   final List<Map<String, dynamic>> packages = [
     {
       'title': 'Family Package',
@@ -251,8 +284,15 @@ class _HomePageState extends State<HomePage> {
                     child: PageView.builder(
                       itemCount: packages.length,
                       controller: _pageController,
-                      itemBuilder: (context, index) => SizedBox(
-                        width: 550,
+                      itemBuilder: (context, index) => GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => PackagePage()), // ← ini dari `package.dart`
+                          );
+                        },
+                        child: SizedBox(
+                          width: 550,
                         child: Card(
                           elevation: 4,
                           shape: RoundedRectangleBorder(
@@ -344,6 +384,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
+                  ),
                   SizedBox(height: 8),
                   Center(
                     child: Row(
@@ -379,53 +420,66 @@ class _HomePageState extends State<HomePage> {
                   ),
                   ),
                   SizedBox(height: 20),
-                  Wrap(
-                    spacing: 15,
-                    runSpacing: 15,
-                    children: categories.map((cat) {
-                      return SizedBox(
-                        width: 72, // 4 item per baris
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Container(
-                              width: 64,
-                              height: 64,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black12,
-                                    blurRadius: 4,
-                                    offset: Offset(0, 2),
-                                  ),
-                                ],
+                  Align(
+                    alignment: Alignment.center,
+                    child: Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: 20,
+                      runSpacing: 20,
+                      children: categories.map((cat) {
+                        return GestureDetector(
+                            onTap: () {
+                          if (cat['label'] == 'Tent') {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => CategoryPage()), // ← dari category.dart
+                            );
+                          }
+                        },
+                        child: SizedBox(
+                          width: 72,
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Container(
+                                width: 64,
+                                height: 64,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 4,
+                                      offset: Offset(0, 2),
+                                    ),
+                                  ],
+                                ),
+                                padding: EdgeInsets.all(8),
+                                child: Image.asset(
+                                  cat['icon']!,
+                                  fit: BoxFit.contain,
+                                ),
                               ),
-                              padding: EdgeInsets.all(8),
-                              child: Image.asset(
-                                cat['icon']!,
-                                fit: BoxFit.contain,
+                              SizedBox(height: 4),
+                              Text(
+                                cat['label']!,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontFamily: 'Poppins SemiBold',
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black,
+                                ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
                               ),
-                            ),
-                            SizedBox(height: 4),
-                            Text(
-                              cat['label']!,
-                              style: TextStyle(
-                                fontFamily: 'Poppins SemiBold',
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.black,
-                              ),
-                              textAlign: TextAlign.center,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              softWrap: true,
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      );
-                    }).toList(),
+                        );
+                      }).toList(),
+                    ),
                   ),
                   SizedBox(height: 30),
                   Text('Our Review', style: TextStyle(
@@ -486,11 +540,24 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: TransparentBottomNavBar(
         currentIndex: _currentIndex,
-        onTap: (index) {
+        onTap: (index) async {
           setState(() {
             _currentIndex = index;
           });
-          // Tambahkan navigasi jika diperlukan
+
+          if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const WhatsAppLauncherPage()),
+            );
+          } else if (index == 1) {
+            // History → navigasi ke halaman History
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const TransactionHistoryPage()),
+            );
+          }
+          // Tambahkan aksi untuk index lain jika perlu
         },
       ),
     );

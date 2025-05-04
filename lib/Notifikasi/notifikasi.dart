@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: NotificationsPage(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
-
 class NotificationsPage extends StatelessWidget {
   const NotificationsPage({super.key});
 
@@ -17,7 +10,7 @@ class NotificationsPage extends StatelessWidget {
         children: [
           // Background image (fixed but smaller)
           Positioned(
-            top: 430,
+            top: 680,
             left: 0,
             right: 0,
             child: Image.asset(

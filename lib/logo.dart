@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login.dart'; // pastikan import
+import 'main.dart'; // pastikan import
 
 void main() {
   runApp(const CamptariaApp());
@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const LoginPage()),
+        MaterialPageRoute(builder: (context) => MainPage()),
       );
     });
   }

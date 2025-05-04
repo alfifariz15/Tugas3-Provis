@@ -1,15 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: ReturnNonFeePage(),
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(
-      scaffoldBackgroundColor: Colors.white,
-    ),
-  ));
-}
-
 class ReturnNonFeePage extends StatelessWidget {
   const ReturnNonFeePage({super.key});
 

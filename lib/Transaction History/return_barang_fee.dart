@@ -1,16 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:file_picker/file_picker.dart';
-
-void main() {
-  runApp(MaterialApp(
-    home: ReturnProductPage(),
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(
-      fontFamily: 'Poppins',
-      scaffoldBackgroundColor: Colors.white,
-    ),
-  ));
-}
 
 class ReturnProductPage extends StatefulWidget {
   const ReturnProductPage({super.key});
@@ -21,16 +9,6 @@ class ReturnProductPage extends StatefulWidget {
 
 class _ReturnProductPageState extends State<ReturnProductPage> {
   String? _fileName;
-
-  Future<void> _pickFile() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles();
-
-    if (result != null) {
-      setState(() {
-        _fileName = result.files.single.name;
-      });
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -219,7 +197,6 @@ class _ReturnProductPageState extends State<ReturnProductPage> {
                                 ),
                               ),
                               ElevatedButton(
-                                onPressed: _pickFile,
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.red,
                                   shape: const RoundedRectangleBorder(
@@ -227,6 +204,7 @@ class _ReturnProductPageState extends State<ReturnProductPage> {
                                   ),
                                   minimumSize: const Size(100, 30),
                                 ),
+                                onPressed: () {  },
                                 child: const Text(
                                   'UPLOAD',
                                   style: TextStyle(

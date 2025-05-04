@@ -199,7 +199,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(6),
                                   ),
-                                  padding: const EdgeInsets.symmetric(vertical: 20),
+                                  padding: const EdgeInsets.symmetric(vertical: 16),
                                 ),
                                 onPressed: () {
                                   Navigator.push(

@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'help.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -144,14 +140,20 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // Background gunung di paling belakang
+        // Tambahan: Latar belakang putih transparan di seluruh halaman
         Positioned.fill(
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: Image.asset(
-              'assets/mountain_background.png',
-              fit: BoxFit.cover,
-            ),
+          child: Container(
+            color: Colors.white, // Ubah sesuai kebutuhan
+          ),
+        ),
+
+        // Background gunung
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Image.asset(
+            'assets/bg.png',
+            fit: BoxFit.cover,
+            width: double.infinity,
           ),
         ),
 

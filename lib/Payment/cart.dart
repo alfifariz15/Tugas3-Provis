@@ -1,17 +1,6 @@
 import 'package:flutter/material.dart';
 import 'checkout.dart';
 
-
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(
-      fontFamily: 'Poppins', // Set Poppins as the default font for the entire app
-    ),
-    home: CartPage(),
-  ));
-}
-
 class CartPage extends StatefulWidget {
   @override
   _CartPageState createState() => _CartPageState();

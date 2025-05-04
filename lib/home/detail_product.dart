@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+// import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(DetailProductPage());
 
-class MyApp extends StatelessWidget {
+class DetailProductPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: DetailProduct(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -37,27 +37,27 @@ Widget _buildFeatureItem(String text) {
   );
 }
 
-class HomePage extends StatefulWidget {
+class DetailProduct extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _DetailProductState createState() => _DetailProductState();
 }
 
 
-class _HomePageState extends State<HomePage> {
+class _DetailProductState extends State<DetailProduct> {
 
-  late YoutubePlayerController _controller;
+  // late YoutubePlayerController _controller;
 
-  @override
-  void initState() {
-    super.initState();
-    _controller = YoutubePlayerController(
-      initialVideoId: 'LxxlN_FhLac',
-      flags: YoutubePlayerFlags(
-        autoPlay: true,
-        mute: true,
-      ),
-    );
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _controller = YoutubePlayerController(
+  //     initialVideoId: 'LxxlN_FhLac',
+  //     flags: YoutubePlayerFlags(
+  //       autoPlay: true,
+  //       mute: true,
+  //     ),
+  //   );
+  // }
 
 
   final PageController _pageController = PageController(viewportFraction: 0.9);
@@ -91,11 +91,11 @@ class _HomePageState extends State<HomePage> {
     // Tambahkan produk lainnya...
   ];
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   _controller.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {

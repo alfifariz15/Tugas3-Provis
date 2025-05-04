@@ -160,7 +160,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   "Self Pickup",
                   style: _poppins.copyWith(fontSize: 16),
                 ),
-                const SizedBox(width: 70),
+                const SizedBox(width: 40),
                 const SizedBox(width: 10),
                 Checkbox(
                   value: homeDelivery,

@@ -1,5 +1,7 @@
+import 'package:campteria/home.dart';
 import 'package:flutter/material.dart';
 import 'register.dart'; // Pastikan file ini ada
+import 'main_screen.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -161,7 +163,7 @@ class _LoginPageState extends State<LoginPage> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(6),
                               ),
-                              padding: const EdgeInsets.symmetric(vertical: 20), // Menambahkan padding vertikal
+                              padding: const EdgeInsets.symmetric(vertical: 16), // Menambahkan padding vertikal
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -216,12 +218,17 @@ class _LoginPageState extends State<LoginPage> {
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
+                    },
                     child: const Text(
                       'Continue as a guest',
                       style: TextStyle(
                         color: Colors.green,
-                        fontWeight: FontWeight.w900, // ⬅️ buat bold
+                        fontWeight: FontWeight.w900,
                       ),
                     ),
                   ),

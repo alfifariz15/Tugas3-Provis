@@ -1,18 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
+class PackagePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -133,7 +121,7 @@ class TransparentBottomNavBar extends StatelessWidget {
   }
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<PackagePage> {
   int _currentIndex = 0; // Tambahkan ini
 
   final PageController _pageController = PageController(viewportFraction: 0.9);
@@ -197,11 +185,11 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Row(
                     children: [
-                      Image.asset(
-                        'assets/icons/back.png',
-                        width: 28,
-                        height: 28,
-                        color: Colors.black, // Opsional: sesuaikan warna
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
                       ),
                       SizedBox(width: 8),
                       Text('Family Package', style: TextStyle(
