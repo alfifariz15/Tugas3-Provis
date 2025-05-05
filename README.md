@@ -1,4 +1,6 @@
-Kelompok 5 - C2
+# CAMPTERIA
+
+## Kelompok 5 - C2
 
 Anggota Kelompok:
 Abdurrahman Rauf Budiman – 2301102
@@ -7,7 +9,7 @@ Marco Henrik Abineno – 2301093
 Muhammad Alfi Fariz – 2311174
 Qalam Noer Fazrian – 2304746
 
-Berikut penjelasan mengenai implementasi UI dalam Flutter:
+## Berikut penjelasan mengenai implementasi UI dalam Flutter:
 
 1. Sign In
 Dalam Sign In, terdapat tombol login dan tombol register yang dapat diklik dan akan menampilkan form register. Tombol "Login as Guest" jika diklik akan diarahkan ke halaman Home.
@@ -69,4 +71,5 @@ Di halaman Help terdapat tiga tombol yang dapat diklik, yaitu tombol About Us, T
 
 22. Contact Us
 
-Saran: Beberapa fitur mungkin belum diimplementasikan karena baru berupa antarmuka (front end) saja.
+## Saran
+Beberapa fitur mungkin belum diimplementasikan karena baru berupa antarmuka (front end) saja.
