@@ -1,4 +1,6 @@
 # CAMPTERIA
+![logo](https://github.com/user-attachments/assets/e5173265-ee6b-4953-99ac-17213d3e8427)
+
 
 ## Kelompok 5 - C2
 
