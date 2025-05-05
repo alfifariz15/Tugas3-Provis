@@ -17,7 +17,7 @@ Qalam Noer Fazrian – 2304746
 Dalam Sign In, terdapat tombol login dan tombol register yang dapat diklik dan akan menampilkan form register. Tombol "Login as Guest" jika diklik akan diarahkan ke halaman Home.
 
 2. Home
-Di halaman Home, package sudah dinavigasikan dan kategori hanya untuk bagian tenda saja. Di navbar terdapat tombol Home, History, Chat, Cart, dan Notification.
+Di halaman Home, terdapat profile, package sudah dinavigasikan dan kategori hanya untuk bagian tenda saja. Di navbar terdapat tombol Home, History, Chat, Cart, dan Notification.
 
 3. History
 Di halaman History, pengguna dapat melihat detail semua transaksinya. Di dalamnya terdapat beberapa status, yaitu:
