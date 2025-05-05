@@ -1,16 +1,15 @@
-# campteria
+# Campteria
 
-A new Flutter project.
+Kelompok 5 - C2
 
-## Getting Started
+Anggota Kelompok:
+1. Abdurrahman Rauf Budiman		2301102
+2. Faiz Bayu Erlangga			2311231
+3. Marco Henrik Abineno			2301093
+4. Muhammad Alfi Fariz			2311174
+5. Qalam Noer Fazrian			2304746
 
-This project is a starting point for a Flutter application.
+Berikut penjelasan mengenai implementasi UI dalam Flutter:
 
-A few resources to get you started if this is your first Flutter project:
+1.Tombol Sign In
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
