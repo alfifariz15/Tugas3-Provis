@@ -93,10 +93,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => CartPage()),
-            );
+            Navigator.pop(context);
           },
         ),
         backgroundColor: Colors.white,

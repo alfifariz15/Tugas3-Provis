@@ -1,3 +1,6 @@
+import 'package:campteria/Notifikasi/notifikasi.dart';
+import 'package:campteria/Payment/cart.dart';
+import 'package:campteria/Profile%20Page%20and%20Help/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'home/package.dart';
@@ -23,7 +26,7 @@ class WhatsAppLauncherPage extends StatelessWidget {
   const WhatsAppLauncherPage({super.key});
 
   Future<void> openWhatsApp(BuildContext context) async {
-    const phoneNumber = '6281298101699';
+    const phoneNumber = '6285158333543';
     final uri = Uri.parse('https://wa.me/$phoneNumber');
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
@@ -262,12 +265,20 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       SizedBox(width: 8),
-                      Image.asset(
-                        'assets/icons/profile.png',
-                        width: 28,
-                        height: 28,
-                        color: Colors.black, // Opsional: sesuaikan warna
-                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ProfilePage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/icons/profile.png',
+                          width: 28,
+                          height: 28,
+                          color: Colors.black,
+                        ),
+                      )
                     ],
                   ),
                   SizedBox(height: 20),
@@ -557,7 +568,18 @@ class _HomePageState extends State<HomePage> {
               MaterialPageRoute(builder: (context) => const TransactionHistoryPage()),
             );
           }
-          // Tambahkan aksi untuk index lain jika perlu
+          else if (index == 3) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CartPage()),
+            );
+          }
+          else if (index == 4) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => NotificationsPage()),
+            );
+          }
         },
       ),
     );

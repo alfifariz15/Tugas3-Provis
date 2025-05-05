@@ -21,10 +21,7 @@ class ConfirmPage extends StatelessWidget {
                 child: IconButton(
                   icon: const Icon(Icons.arrow_back),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Payment()),
-                    );
+                    Navigator.pop(context);
                   },
                 ),
               ),

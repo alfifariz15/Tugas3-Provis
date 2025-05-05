@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'detail_transaction.dart';
 import 'rate_service_page.dart';
-import 'return_barang_nonfee.dart';
 
 class TransactionHistoryPage extends StatelessWidget {
   const TransactionHistoryPage({super.key});
@@ -15,12 +14,6 @@ class TransactionHistoryPage extends StatelessWidget {
             showButton: true,
             buttonText: "Return",
             onButtonPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ReturnNonFeePage(),
-                ),
-              );
             },
           ),
         ),

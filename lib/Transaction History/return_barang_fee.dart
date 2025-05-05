@@ -19,7 +19,7 @@ class _ReturnProductPageState extends State<ReturnProductPage> {
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Image.asset(
-                'assets/mountain_background.png',
+                'assets/bg.png',
                 fit: BoxFit.cover,
                 width: double.infinity,
               ),
@@ -138,14 +138,14 @@ class _ReturnProductPageState extends State<ReturnProductPage> {
                                       ),
                                       SizedBox(height: 4),
                                       Text(
-                                        "💵  Fee per day: \$30",
+                                        "💵  Fee per day: \Rp. 30.000",
                                         style: TextStyle(fontSize: 13, fontFamily: 'Poppins'),
                                       ),
                                       SizedBox(height: 8),
                                       Divider(thickness: 1),
                                       SizedBox(height: 6),
                                       Text(
-                                        "Total Fee: \$30",
+                                        "Total Fee: \Rp 30.000",
                                         style: TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold,

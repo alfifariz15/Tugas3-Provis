@@ -1,3 +1,4 @@
+import 'package:campteria/main.dart';
 import 'package:flutter/material.dart';
 // import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -118,11 +119,16 @@ class _DetailProductState extends State<DetailProduct> {
                 children: [
                   Row(
                     children: [
-                      Image.asset(
-                        'assets/icons/back.png',
-                        width: 28,
-                        height: 28,
-                        color: Colors.black, // Opsional: sesuaikan warna
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MainPage(),
+                            ),
+                          );
+                        },
                       ),
                       SizedBox(width: 8),
                       Expanded(

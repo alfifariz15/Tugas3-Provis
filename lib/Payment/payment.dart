@@ -18,10 +18,7 @@ class Payment extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const CheckoutPage()),
-            );
+            Navigator.pop(context);
           },
         ),
         backgroundColor: Colors.white,
