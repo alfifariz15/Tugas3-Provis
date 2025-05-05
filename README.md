@@ -2,12 +2,12 @@
 
 ## Kelompok 5 - C2
 
-Anggota Kelompok:
-Abdurrahman Rauf Budiman – 2301102
-Faiz Bayu Erlangga – 2311231
-Marco Henrik Abineno – 2301093
-Muhammad Alfi Fariz – 2311174
-Qalam Noer Fazrian – 2304746
+Anggota Kelompok:  
+Abdurrahman Rauf Budiman – 2301102  
+Faiz Bayu Erlangga – 2311231  
+Marco Henrik Abineno – 2301093  
+Muhammad Alfi Fariz – 2311174  
+Qalam Noer Fazrian – 2304746  
 
 ## Berikut penjelasan mengenai implementasi UI dalam Flutter:
 
