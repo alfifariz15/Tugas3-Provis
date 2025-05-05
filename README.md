@@ -73,5 +73,5 @@ Di halaman Help terdapat tiga tombol yang dapat diklik, yaitu tombol About Us, T
 
 22. Contact Us
 
-## Saran
+## Catatan
 Beberapa fitur mungkin belum diimplementasikan karena baru berupa antarmuka (front end) saja.
