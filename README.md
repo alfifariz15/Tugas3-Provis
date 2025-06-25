@@ -13,7 +13,7 @@ Qalam Noer Fazrian – 2304746
 
 ## Cara Menjalankan Aplikasi
 1. Clone terlebih dahulu github repository ini "https://github.com/alfifariz15/Tugas3-Provis.git"
-2. Setelah clone, edit configuration Run/Debug nya dan ganti nama dengan `logo.dart` lalu untuk dart entrypoint nya arahkan ke file `logo.dart` projek nya `"Tugas3-Provis\lib\logo.dart"`
+2. Setelah clone, edit configuration Run/Debug nya dan ganti nama dengan `main.dart` lalu untuk dart entrypoint nya arahkan ke file `main.dart` projek nya `"Tugas3-Provis\lib\main.dart"`
 3. Setelah configuration jangan lupa di flutter pub get atau get dependencies
 4. Setelah itu baru run projek aplikasi nya
 
