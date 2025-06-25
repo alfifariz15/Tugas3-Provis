@@ -1,5 +1,5 @@
-import 'package:campteria/Transaction%20History/return_barang_fee.dart';
 import 'package:flutter/material.dart';
+
 import 'package:campteria/login.dart';
 import 'package:campteria/Payment/checkout.dart';
 import 'package:campteria/home.dart';
@@ -20,7 +20,92 @@ import 'package:campteria/home/detail_product.dart';
 import 'package:campteria/Profile%20Page%20and%20Help/terms_and_conditions.dart';
 import 'package:campteria/home/package.dart';
 import 'package:campteria/Profile%20Page%20and%20Help/contact_us.dart';
+import 'package:campteria/Transaction%20History/return_barang_fee.dart';
 
+
+void main() {
+  runApp(const CamptariaApp());
+}
+
+class CamptariaApp extends StatelessWidget {
+  const CamptariaApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'Poppins', // semua teks jadi Poppins
+      ),
+      home: const SplashScreen(), // Aplikasi dimulai dari SplashScreen
+    );
+  }
+}
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Pindah ke MainPage setelah 2 detik
+    Future.delayed(const Duration(seconds: 2), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => MainPage()), // Mengarah ke MainPage
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Stack(
+        children: [
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Image.asset(
+              'assets/bg.png',
+              fit: BoxFit.cover,
+              width: double.infinity,
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset(
+                  'assets/logo.png',
+                  width: 120,
+                  height: 120,
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  'CAMPTERIA',
+                  style: TextStyle(
+                    fontFamily: 'Rubik',
+                    fontWeight: FontWeight.w800,
+                    fontSize: 28,
+                    color: Color(0xFF4A3A2E),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+// -- Kode dari main.dart original --
 
 class MainPage extends StatefulWidget {
   @override
