@@ -1,7 +1,6 @@
 import 'package:campteria/home.dart';
 import 'package:flutter/material.dart';
 import 'register.dart'; // Pastikan file ini ada
-import 'main_screen.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
