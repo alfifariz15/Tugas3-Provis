@@ -11,6 +11,14 @@ Marco Henrik Abineno – 2301093
 Muhammad Alfi Fariz – 2311174  
 Qalam Noer Fazrian – 2304746  
 
+## Cara Menjalankan Aplikasi
+1. Clone terlebih dahulu github repository ini "https://github.com/alfifariz15/Tugas3-Provis.git"
+2. Setelah clone, edit configuration Run/Debug nya dan ganti nama dengan `logo.dart` lalu untuk dart entrypoint nya arahkan ke file `logo.dart` projek nya `"Tugas3-Provis\lib\logo.dart"`
+3. Setelah configuration jangan lupa di flutter pub get atau get dependencies
+4. Setelah itu baru run projek aplikasi nya
+
+`Disclaimer : Kami menggunakan web chrome untuk menjalankan aplikasi nya`
+
 ## Berikut penjelasan mengenai implementasi UI dalam Flutter:
 
 | No. | Halaman           | Deskripsi                                                                                                                                         |
